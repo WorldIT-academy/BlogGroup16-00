@@ -20,5 +20,6 @@ from django.urls import path, include
 # from ..core_app import render_home_page
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include('core_app.urls'))
+    path("", include('core_app.urls')),
+    path("post/", include("post_app.urls"))
 ]
