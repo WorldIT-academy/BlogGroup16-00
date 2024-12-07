@@ -12,4 +12,16 @@ def render_all_posts(request):
         context = {
             'all_posts': all_posts
         }
-        )
+    )
+
+def render_view_post(request, pk):
+    
+    post = Post.objects.get(pk = pk)
+    
+    return render(
+        template_name = "post_app/view_post.html",
+        request= request,
+        context = {
+            "post": post
+        }
+    )

@@ -9,6 +9,7 @@
         {% for post in all_posts %}
             <h2>{{post.title}}</h2>
             <h3>author: {{post.author.name}} {{post.author.surname}}</h3>
+            <a href="/post/view_post/{{ post.pk }}">Читати більше</a>
             <hr>
         {% endfor %}
     </body>
